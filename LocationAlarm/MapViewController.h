@@ -1,5 +1,5 @@
 //
-//  AppDelegate.h
+//  MapViewController.h
 //  LocationAlarm
 //
 //  Created by Michael Spearman on 1/14/15.
@@ -7,11 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MapKit/MapKit.h>
 #import <CoreLocation/CoreLocation.h>
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
-
-@property (strong, nonatomic) UIWindow *window;
-
+@interface MapViewController : UIViewController <CLLocationManagerDelegate, MKMapViewDelegate, UISearchBarDelegate>
+{
+    IBOutlet MKMapView *map;
+}
 @end
-
